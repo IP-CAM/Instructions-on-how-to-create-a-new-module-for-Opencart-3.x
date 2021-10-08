@@ -60,7 +60,7 @@ a principal útilidade do twig é a sintaxe fácil com a qual podemos usar PHP d
   
 # Back-End
   O opencart utiliza da estrutura MVC-L para estruturar pastas e arquivos, vamos navegar um pouco por cada uma dessas siglas:
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/gdantas-laon/Nova-Extensao/blob/master/imagens/mvcl2.png)
 
 ## Model
   O model é o diretório onde são armazenadas as instruções referentes a operações no banco de dados, por padrão apenas estas são armazenadas em arquivos dentro do model, comumente as funções pertencentes a uma classe model se resumem a "querys", consultas ou operações a um banco de dados, você pode encontrar mais informações sobre querys em [Funções do Banco de dados](#Funções-do-Bando-de-dados).
