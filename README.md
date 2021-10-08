@@ -18,7 +18,7 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 * **Install.xml** : Consiste no arquivo que dá instruções sobre a extensão e também permite que se escreva dentro de arquivos pré-existentes no projeto opencart.
 * **UPLOAD** : Esse diretório vai armazenar todos os arquivos da sua extensão, seguindo a estrutura do projeto opencart, esses arquivos serão integrados ao projeto.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/gdantas-laon/Nova-extensao/blob/master/uploadInstall.png?raw=true)
 
 ## Observações 👀
 * Tente criar extensões que correspondam aos seus respectivos tipos, por exemplo, uma extensão alimentadora como a integração com um ERP corresponde melhor a um "alimentador" do que a um "módulo", uma extensão que integra uma nova forma de pagamento é explicitamente do tipo "pagamento" e uma função para um popup de confirmação de maior idade corresponde a um "módulo" pois implementa uma funcionalidade que afeta diretamente a experiência de navegar do cliente.
