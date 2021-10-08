@@ -1,7 +1,9 @@
 # Novo-Modulo
 Instruções sobre como criar um novo módulo para opencart 3.x
 
-# Introdução 
+# Introdução 👋
+## Considerações Iniciais
+  Olá, esse readme tem a intenção de facilitar sua caminhada através do Opencart e a criação do seu módulo, tudo o que apresentar aqui deriva das minhas pesquisas pessoais durante minha experiência criando módulo e trabalhando com a plataforma Opencart, por isso é não está isento de equívocos e faltas, por mais que eu tente sempre seguir documentações oficiais e fontes confiáveis. Caso você encontre uma incoerência ou erro por favor abra uma issue e caso tenha conteudo para agregar abra uma PR, ademais espero que seja de grande ajuda, enjoy it 🤗. 
 
 # 1 - Requisitos
 Para facilitar a criação do módulo, alguns requistos prévios são necessarios, vou listar aqui quais e onde encontra conteúdo:
@@ -10,7 +12,7 @@ Para facilitar a criação do módulo, alguns requistos prévios são necessario
 2 - Estrutura de uma extensão/módulo : http://docs.opencart.com/en-gb/developer/module/
 3 - Tutorial completo de como desenolver o módulo : https://webocreation.com/blog/opencart-3-custom-module-development-tutorial-hello-world-module/ && https://medium.com/@justinasjbeinorius/building-your-first-opencart-3-extension-d766df28821b
 
-## Resumo
+## Resumo 🗒️
 A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um diretório : **Install.xml** e **UPLOAD**.
 
 * **Install.xml** : Consiste no arquivo que dá instruções sobre a extensão e também permite que se escreva dentro de arquivos pré-existentes no projeto opencart.
@@ -18,7 +20,7 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
-## Observações
+## Observações 👀
 * Tente criar extensões que correspondam aos seus respectivos tipos, por exemplo, uma extensão alimentadora como a integração com um ERP corresponde melhor a um "alimentador" do que a um "módulo", uma extensão que integra uma nova forma de pagamento é explicitamente do tipo "pagamento" e uma função para um popup de confirmação de maior idade corresponde a um "módulo" pois implementa uma funcionalidade que afeta diretamente a experiência de navegar do cliente.
 * Alguns módulos podem necessitar de "variações" como um módulo de banners ou de parcelamento, para isso implemente conforme o link **2** em requisitos, já outros módulos não precisam de tais implementações, pra tais recomendo armazenar todas as configurações do módulo na tabela "oc_settings" ao invés da "oc_module".
 * É de extrema importância para integridade do e-commerce que os métodos ```function install()``` e ```function uninstall()``` sejam implementados, principalmente se você criar novas tabelas no banco de dados, esse métodos criam e destroem respectivamente informações necessarias a extensão no banco de dados do projeto.
@@ -33,17 +35,18 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 * Se possivel opte por salvar informações da configuração da extensão na tabela oc_setting.
 * O opencart oferece diversas funções que podem te ajudar a regastar informações que você talvez precisa como por exemplo o método ```$this->cart()``` que oferece informações referentes ao carrinho da sessão ou ```$this->user()``` para resgatar informações sobre o usuário corrente, para mais informações acesse [Funções Úteis](#funções-úteis).
 
-# Estilos 
-  O Opencart 3.x utiliza como framework para estilo o [Bootstrap 3.3.x](https://getbootstrap.com/docs/3.3/css/) o qual recomendo que você também utilize para suas extensões, como pacote de ícones ele utiliza o [FontAwesome](https://fontawesome.com/v4.7/icons/) que também recomendo que use para seguir o padrão, por padrão o opencart utiliza dois botões na tela de configurações de extensões, um para salvar outro para cancelar/voltar, para manter o padrão de estetica tambem recomendo o uso destes 
-  ``` <div class="pull-right">
-        <button type="submit" form="form-module" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
-        <a href="{{ action.cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div> ```
+# Estilos 🎨
+  O Opencart 3.x utiliza como framework para estilo o [Bootstrap 3.3.x](https://getbootstrap.com/docs/3.3/css/) o qual recomendo que você também utilize para suas extensões, como pacote de ícones ele utiliza o [FontAwesome](https://fontawesome.com/v4.7/icons/) que também recomendo que use para seguir o padrão, por padrão o opencart utiliza dois botões na tela de configurações de extensões, um para salvar outro para cancelar/voltar, para manter o padrão de estetica tambem recomendo o uso destes: 
+       ```<div class="pull-right">
+         <button type="submit" form="form-module" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ action.cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a>
+        </div>```.
 
-## Twig
+## Twig 🌳
   O Twig é um criador de templates HTML que é utilizado por padrão no Opencart e você pode encontra a documentação dele [aqui](https://twig.symfony.com/doc/3.x/),
 a principal útilidade do twig é a sintaxe fácil com a qual podemos usar PHP dentro dele, você pode ler sobre essa ferramenta [aqui](https://twig.symfony.com/doc/3.x/coding_standards.html) mas vou citar um breve resumo de como funciona:
 
-* Use ```{`` e ```}``` como demilitadores e sempre coloque um espaço depois de abrir e antes de fechar os delimitadores, e então o texto compreendido entre eles será interpretado como código PHP, exemplo:
+* Use ```{``` e ```}``` como demilitadores e sempre coloque um espaço depois de abrir e antes de fechar os delimitadores, e então o texto compreendido entre eles será interpretado como código PHP, exemplo:
             ``` {{ foo }}```
 
 * É possivel usar operadores lógicos como em PHP 
@@ -83,4 +86,21 @@ a principal útilidade do twig é a sintaxe fácil com a qual podemos usar PHP d
 ## Cart
   * GetProducts : Esse método resgata informações sobre os produtos do carrinho corrente e pode ser chamado por ```$this->cart->getProducts()```.
   * Add : Esse método adiciona um novo item ao carrinho sua chamada pode ser feita por ```$this->cart->add($product_id, $quantity = 1, $option = array(), $recurring_id = 0) ``` e recebe como argumento, o id do produto, a quantidade, as opções do mesmo.
+  * HasProducts : Confere se existem produtos no carrinho pode ser chamada através de ``` $this->cart->hasProducts() ``` e não recebe argumentos.
+  * GetTotal : Fornece o valor total no carrinho pode ser chamado através de ``` $this->cart->getTotal() ``` e não recebe argumentos.
   
+## Customer
+  Aqui é possivel também acessar todas as propriedades do objeto customer instânciado na sessão, através de seus métodos acessores, aqui vão os possivelmente mais úteis :
+  **ps:** todos os métodos acessores são chamados seguindo essa estrutura : ```$this->customer->getPropriedade() ```.
+  * getId : retorna o Id do cliente.
+  * getFistName : retorna o primeiro nome do cliente.
+  * getLasName : retorna o sobrenome do cliente.
+  * getEmail : retorna o email do cliente.
+  * getTelephone : retorna o telefone do cliente.
+  * getAdressId : retorna o id do endereço cadastrado.
+ 
+# API 🖥️
+Em desenvolvimento.:hammer:	
+
+# Considerações Finais.
+Por fim gostaria de complementar com um pequeno lembrete, se possivel sempre **idente e documente** seu código pra facilitar a manutenção, uma ótima referência é o [PSR-12](https://www.php-fig.org/psr/psr-12/) que ensina boas práticas de pradronização pra desenvolvimento em php, é bom lembrar que ainda tenho muito a aprender, então se você reparar qualquer equívoco em qualquer instrução escrita aqui não exite em me contatar e é claro PR são sempre bem vindas, espero que esse conteudo facilite um pouco sua jornada através do Opencart, valeu e até proxima 👋 🤗
