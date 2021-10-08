@@ -8,9 +8,9 @@ Instruções sobre como criar um novo módulo para opencart 3.x
 # 1 - Requisitos
 Para facilitar a criação do módulo, alguns requistos prévios são necessarios, vou listar aqui quais e onde encontra conteúdo:
 
-1 - Extensão OCMOD e seu funcionamento : https://webocreation.com/blog/ocmod-documentation/ && https://github.com/opencart/opencart/wiki/Modification-System
-2 - Estrutura de uma extensão/módulo : http://docs.opencart.com/en-gb/developer/module/
-3 - Tutorial completo de como desenolver o módulo : https://webocreation.com/blog/opencart-3-custom-module-development-tutorial-hello-world-module/ && https://medium.com/@justinasjbeinorius/building-your-first-opencart-3-extension-d766df28821b
+1. Extensão OCMOD e seu funcionamento : https://webocreation.com/blog/ocmod-documentation/ && https://github.com/opencart/opencart/wiki/Modification-System
+1. - Estrutura de uma extensão/módulo : http://docs.opencart.com/en-gb/developer/module/
+1. - Tutorial completo de como desenolver o módulo : https://webocreation.com/blog/opencart-3-custom-module-development-tutorial-hello-world-module/ && https://medium.com/@justinasjbeinorius/building-your-first-opencart-3-extension-d766df28821b
 
 ## Resumo 🗒️
 A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um diretório : **Install.xml** e **UPLOAD**.
