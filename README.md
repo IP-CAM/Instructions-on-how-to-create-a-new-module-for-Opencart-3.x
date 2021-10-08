@@ -18,7 +18,7 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 * **Install.xml** : Consiste no arquivo que dá instruções sobre a extensão e também permite que se escreva dentro de arquivos pré-existentes no projeto opencart.
 * **UPLOAD** : Esse diretório vai armazenar todos os arquivos da sua extensão, seguindo a estrutura do projeto opencart, esses arquivos serão integrados ao projeto.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/gdantas-laon/Nova-Extensao/blob/master/imagens/grupoDeUsuarios.png)
 
 ## Observações 👀
 * Tente criar extensões que correspondam aos seus respectivos tipos, por exemplo, uma extensão alimentadora como a integração com um ERP corresponde melhor a um "alimentador" do que a um "módulo", uma extensão que integra uma nova forma de pagamento é explicitamente do tipo "pagamento" e uma função para um popup de confirmação de maior idade corresponde a um "módulo" pois implementa uma funcionalidade que afeta diretamente a experiência de navegar do cliente.
@@ -26,11 +26,11 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 * É de extrema importância para integridade do e-commerce que os métodos ```function install()``` e ```function uninstall()``` sejam implementados, principalmente se você criar novas tabelas no banco de dados, esse métodos criam e destroem respectivamente informações necessarias a extensão no banco de dados do projeto.
 * Lembre-se de sempre ao instalar a extensão de recarregar as modificações em **Extensões -> modificações** no painel do administrador.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/gdantas-laon/Nova-Extensao/blob/master/imagens/modifications.png)
 
 * Caso tenha problemas com permissão ao instalar a nova extensão se certifique que possui permissões para alterar o caminho correspondente a este em **Configurações->gerenciar usuários->grupo de usuários** seleciona seu tipo de usuario e procure pelo caminho da extensão e caso não esteja marcada a marque e salve as configurações.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/gdantas-laon/Nova-Extensao/blob/master/imagens/grupoDeUsuarios.png)
 # Recomendações
 * Se possivel opte por salvar informações da configuração da extensão na tabela oc_setting.
 * O opencart oferece diversas funções que podem te ajudar a regastar informações que você talvez precisa como por exemplo o método ```$this->cart()``` que oferece informações referentes ao carrinho da sessão ou ```$this->user()``` para resgatar informações sobre o usuário corrente, para mais informações acesse [Funções Úteis](#funções-úteis).
