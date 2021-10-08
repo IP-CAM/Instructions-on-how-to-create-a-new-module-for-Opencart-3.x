@@ -1,5 +1,5 @@
-# Novo-Modulo
-Instruções sobre como criar um novo módulo para opencart 3.x
+# Nova Extensão
+Instruções sobre como criar uma nova extensão para opencart 3.x
 
 # Introdução 👋
 ## Considerações Iniciais
@@ -34,6 +34,7 @@ A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um di
 # Recomendações
 * Se possivel opte por salvar informações da configuração da extensão na tabela oc_setting.
 * O opencart oferece diversas funções que podem te ajudar a regastar informações que você talvez precisa como por exemplo o método ```$this->cart()``` que oferece informações referentes ao carrinho da sessão ou ```$this->user()``` para resgatar informações sobre o usuário corrente, para mais informações acesse [Funções Úteis](#funções-úteis).
+* Ao criar o .ocmod.zip da sua nova extensão selecione o arquivo **Install.xml** e o diretório **UPLOAD** e os compacte juntos no formado .zip, **se você compactar um diretório mãe contendo os dois o opencart não reconhecera sua extensão**.
 
 # Estilos 🎨
   O Opencart 3.x utiliza como framework para estilo o [Bootstrap 3.3.x](https://getbootstrap.com/docs/3.3/css/) o qual recomendo que você também utilize para suas extensões, como pacote de ícones ele utiliza o [FontAwesome](https://fontawesome.com/v4.7/icons/) que também recomendo que use para seguir o padrão, por padrão o opencart utiliza dois botões na tela de configurações de extensões, um para salvar outro para cancelar/voltar, para manter o padrão de estetica tambem recomendo o uso destes: 
