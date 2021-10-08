@@ -3,10 +3,10 @@ Instruções sobre como criar uma nova extensão para opencart 3.x
 
 # Introdução 👋
 ## Considerações Iniciais
-  Olá, esse readme tem a intenção de facilitar sua caminhada através do Opencart e a criação do seu módulo, tudo o que apresentar aqui deriva das minhas pesquisas pessoais durante minha experiência criando módulo e trabalhando com a plataforma Opencart, por isso é não está isento de equívocos e faltas, por mais que eu tente sempre seguir documentações oficiais e fontes confiáveis. Caso você encontre uma incoerência ou erro por favor abra uma issue e caso tenha conteudo para agregar abra uma PR, ademais espero que seja de grande ajuda, enjoy it 🤗. 
+  Olá, esse readme tem a intenção de facilitar sua caminhada através do Opencart e a criação da sua extensão, tudo o que apresentar aqui deriva das minhas pesquisas pessoais durante minha experiência criando extensões e trabalhando com a plataforma Opencart, por isso é não está isento de equívocos e faltas, por mais que eu tente sempre seguir documentações oficiais e fontes confiáveis. Caso você encontre uma incoerência ou erro por favor abra uma issue e caso tenha conteudo para agregar abra uma PR, ademais espero que seja de grande ajuda, enjoy it 🤗. 
 
 # 1 - Requisitos
-Para facilitar a criação do módulo, alguns requistos prévios são necessarios, vou listar aqui quais e onde encontra conteúdo:
+Para facilitar a criação da extensão, alguns requistos prévios são necessarios, vou listar aqui quais e onde encontra conteúdo:
 
 1. - Extensão OCMOD e seu funcionamento : https://webocreation.com/blog/ocmod-documentation/ && https://github.com/opencart/opencart/wiki/Modification-System
 1. - Estrutura de uma extensão/módulo : http://docs.opencart.com/en-gb/developer/module/
