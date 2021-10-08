@@ -13,7 +13,7 @@ Para facilitar a criação do módulo, alguns requistos prévios são necessario
 1. - Tutorial completo de como desenolver o módulo : https://webocreation.com/blog/opencart-3-custom-module-development-tutorial-hello-world-module/ && https://medium.com/@justinasjbeinorius/building-your-first-opencart-3-extension-d766df28821b
 
 ## Resumo 🗒️
-A estrutura básica de uma extensão para Opencart consiste em 1 arquivo e um diretório : **Install.xml** e **UPLOAD**.
+A estrutura básica de uma extensão para Opencart consiste em um arquivo e um diretório : **Install.xml** e **UPLOAD**.
 
 * **Install.xml** : Consiste no arquivo que dá instruções sobre a extensão e também permite que se escreva dentro de arquivos pré-existentes no projeto opencart.
 * **UPLOAD** : Esse diretório vai armazenar todos os arquivos da sua extensão, seguindo a estrutura do projeto opencart, esses arquivos serão integrados ao projeto.
