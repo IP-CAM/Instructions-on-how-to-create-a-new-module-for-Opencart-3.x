@@ -47,7 +47,7 @@ A estrutura básica de uma extensão para Opencart consiste em um arquivo e um d
   O Twig é um criador de templates HTML que é utilizado por padrão no Opencart e você pode encontra a documentação dele [aqui](https://twig.symfony.com/doc/3.x/),
 a principal útilidade do twig é a sintaxe fácil com a qual podemos usar PHP dentro dele, você pode ler sobre essa ferramenta [aqui](https://twig.symfony.com/doc/3.x/coding_standards.html) mas vou citar um breve resumo de como funciona:
 
-* Use ```{``` e ```}``` como demilitadores e sempre coloque um espaço depois de abrir e antes de fechar os delimitadores, e então o texto compreendido entre eles será interpretado como código PHP, exemplo:
+* Use ```{{``` e ```}}``` como demilitadores e sempre coloque um espaço depois de abrir e antes de fechar os delimitadores, e então o texto compreendido entre eles será interpretado como código PHP, exemplo:
             ``` {{ foo }}```
 
 * É possivel usar operadores lógicos como em PHP 
